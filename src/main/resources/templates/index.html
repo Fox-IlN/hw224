@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    <input name="firstName" placeholder="First Name">
+    <input name="lastName" placeholder="Last Name">
+    <input name="patronymic" placeholder="Patronymic">
+    <button type="send" >Add</button>
+</form>
+    <table>
+        <tr th:each ="user: ${users}" >
+            <td th:text="${user.firstName}"></td>
+            <td th:text="${user.lastName}"></td>
+            <td th:text="${user.patronymic}"></td>
+        </tr>
+    </table>>
+</body>
+</html>
